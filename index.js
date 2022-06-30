@@ -14,6 +14,12 @@ app.use((req, res, next) => {
   next()
   
 })
+app.use((req, res, next) => {
+  console.log(' in in the middle baby');
+  res.send('<h1>hello from the otherside</h1>')
+  next()
+  
+})
 
 const server = http.createServer(app)
 
