@@ -1,26 +1,24 @@
-// type of erros to look for
-//syntax errors
-//logical error
-//runtime error
+import db from "./connection.js";
+import express from "express"
+import cors from "cors";
+import chalk from "chalk";
+import router from "./routes/routes.js";
 
-// imports 
-const http = require('http');
-
-//imports
-const express = require('express');
 const app = express()
-app.use((req, res, next) => {
-  console.log('middle baby');
-  next()
-  
-})
-app.use((req, res, next) => {
-  console.log(' in in the middle baby');
-  res.send('<h1>hello from the otherside</h1>')
-  next()
-  
-})
+const PORT = 3000;
 
-const server = http.createServer(app)
+app.use(express.json());
+app.use(cors());
+app.use("/", router);
 
-server.listen(3000)
+db.on("connected",()=>{
+
+  app.listen(PORT,()=>{
+    console.log(
+        chalk.cyan(
+          `Express server running in development on: http://localhost:${PORT}`
+        )
+      );
+  })
+
+})

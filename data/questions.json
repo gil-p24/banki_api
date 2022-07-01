@@ -1,0 +1,12 @@
+[
+   {
+     "content": "why you",
+     "diffculty-rating": 10, 
+     "type": "behavioral"
+  },
+  {
+     "content": "quick sort",
+     "diffculty-rating": 4,
+     "type": "technical"
+  }
+]

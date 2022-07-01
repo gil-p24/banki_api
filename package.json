@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "testing": "nodemon index.js",
+    "start": "node index.js",
+    "seed": "node --experimental-json-modules ./data/seed.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gil-p24/banki_api.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,6 +23,7 @@
   "homepage": "https://github.com/gil-p24/banki_api#readme",
   "dependencies": {
     "axios": "^0.27.2",
+    "chalk": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
