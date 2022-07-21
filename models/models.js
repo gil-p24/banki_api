@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 let question = new mongoose.Schema({
-  "content": String,
+  "question": String,
      "diffculty-rating": Number, 
      "type": String,
 })
