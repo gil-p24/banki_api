@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import chalk from "chalk";
 
 
-let connectionString = "mongodb://127.0.0.1:27017/Bank";
+let connectionString = process.env.MONGO_URL ||  "mongodb://127.0.0.1:27017/Bank";
 
 let mongooseConfig = { useNewUrlParser: true, useUnifiedTopology: true };
 
