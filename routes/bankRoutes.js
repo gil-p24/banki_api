@@ -10,3 +10,6 @@ router.delete("/del/:id",controller.deleteOneQuestion)
 router.post("/create",controller.createOneQuestion)
 
 export default router
+
+
+// sdsdsdsd
