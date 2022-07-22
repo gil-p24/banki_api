@@ -1,11 +1,14 @@
 {
   "name": "banki_api",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.16.0"
+    },
   "description": "",
   "main": "index.js",
   "scripts": {
-    "testing": "nodemon index.js",
     "start": "node index.js",
+    "testing": "nodemon index.js",
     "seed": "node --experimental-json-modules ./data/seed.js"
   },
   "repository": {
