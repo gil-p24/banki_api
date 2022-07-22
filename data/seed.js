@@ -9,6 +9,6 @@ const seed = async () => {
 }
 
 
-seed()
+export default seed()
 
 
